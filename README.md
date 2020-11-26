@@ -89,6 +89,18 @@ page.on('request', async request => {
 });
 ```
 
+
+Using socks authentication:
+```
+const proxyOptions = {
+  protocol: 'socks5:',
+  auth: 'myUserName:p4$$w0rd',
+  host: '127.0.0.1',
+  port: 1080,
+}
+await useProxy(page, proxyOptions)
+```
+
 **NOTE:** It is necessary to set [page.setRequestInterception](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagesetrequestinterceptionvalue) to true when setting proxies per request, otherwise the function will fail.
 
 #### Authenticating:
