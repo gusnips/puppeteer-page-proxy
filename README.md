@@ -91,7 +91,7 @@ page.on('request', async request => {
 
 
 Using socks authentication:
-```
+```js
 const proxyOptions = {
   protocol: 'socks5:',
   auth: 'myUserName:p4$$w0rd',
